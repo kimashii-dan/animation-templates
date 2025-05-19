@@ -5,6 +5,7 @@ export default function Steps() {
 
   return (
     <section>
+      <h1 className="title">Sticky container</h1>
       <div className="steps-container">
         <div>
           <div className="dog">

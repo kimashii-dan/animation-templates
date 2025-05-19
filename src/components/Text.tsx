@@ -15,6 +15,7 @@ export default function Text() {
 
   return (
     <section>
+      <h1 className="title">Text split</h1>
       <div className="container">
         <motion.p className="text" ref={element}>
           {words.map((word, index) => {

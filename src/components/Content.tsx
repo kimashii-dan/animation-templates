@@ -1,3 +1,4 @@
+import Carousel from "./Carousel";
 import Steps from "./Steps";
 
 import Text from "./Text";
@@ -9,6 +10,8 @@ export default function Content() {
       <Steps />
       <section />
       <Text />
+      <section />
+      <Carousel />
       <section />
     </main>
   );
