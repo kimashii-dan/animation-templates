@@ -4,8 +4,8 @@ export default function Steps() {
   const steps = Array(3).fill(text);
 
   return (
-    <section>
-      <h1 className="title">Sticky container</h1>
+    <section className="steps-section">
+      <h1 className="title">Steps to lorem ipsum</h1>
       <div className="steps-container">
         <div>
           <div className="dog">

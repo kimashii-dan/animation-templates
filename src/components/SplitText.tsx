@@ -1,10 +1,9 @@
-import { motion, useScroll } from "motion/react";
+import { motion, MotionValue, useScroll, useTransform } from "motion/react";
 
 import { useRef } from "react";
-import Word from "./Word";
 import { text } from "../text";
 
-export default function Text() {
+export default function SplitText() {
   const words = text.split(" ");
 
   const element = useRef(null);
@@ -14,10 +13,10 @@ export default function Text() {
   });
 
   return (
-    <section>
+    <section className="split-text-section">
       <h1 className="title">Text split</h1>
-      <div className="container">
-        <motion.p className="text" ref={element}>
+      <div className="split-text-container">
+        <motion.p className="split-text" ref={element}>
           {words.map((word, index) => {
             const start = index / words.length;
             const end = start + 1 / words.length;
@@ -33,5 +32,24 @@ export default function Text() {
         </motion.p>
       </div>
     </section>
+  );
+}
+
+function Word({
+  word,
+  range,
+  progress,
+}: {
+  word: string;
+  range: number[];
+  progress: MotionValue<number>;
+}) {
+  const opacity = useTransform(progress, range, [0, 1]);
+
+  return (
+    <span className="split-word">
+      <span className="shadow">{word}</span>
+      <motion.span style={{ opacity }}>{word}</motion.span>
+    </span>
   );
 }

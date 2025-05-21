@@ -9,7 +9,7 @@ const images = [
   "/images/converse.jpg",
 ];
 
-export default function Carousel() {
+export default function HorizontalScroll() {
   const element = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -31,9 +31,9 @@ export default function Carousel() {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${percent}%`]);
 
   return (
-    <div className="carousel-container" ref={element}>
+    <section className="horizontal-scroll-section" ref={element}>
       <h1 className="title">Horizontal scroll</h1>
-      <div className="carousel">
+      <div className="horizontal-scroll-container">
         <motion.div
           className="images"
           style={{
@@ -55,6 +55,6 @@ export default function Carousel() {
           })}
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
