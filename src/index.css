@@ -159,3 +159,44 @@ p {
     }
   }
 }
+
+
+.parallax-images {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .parallax-images-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+
+    .parallax-image {
+      position: absolute;
+      object-fit: cover;
+
+    }
+
+    .parallax-image:nth-child(1) {
+      width: 50rem;
+      z-index: 1;
+    }
+
+    .parallax-image:nth-child(2) {
+      top: 100px;
+      left: 80px;
+      z-index: 2
+    }
+
+    .parallax-image:nth-child(3) {
+      bottom: 100px;
+      right: 80px;
+      z-index: 2;
+    }
+  }
+}

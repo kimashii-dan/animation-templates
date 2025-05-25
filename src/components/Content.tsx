@@ -2,6 +2,7 @@ import HorizontalScroll from "./HorizontalScroll";
 import Steps from "./Steps";
 import SplitText from "./SplitText";
 import ParallaxText from "./ParallaxText";
+import ParallaxImages from "./ParallaxImages";
 
 export default function Content() {
   return (
@@ -14,6 +15,8 @@ export default function Content() {
       <HorizontalScroll />
       <div className="window-gap" />
       <ParallaxText />
+      <div className="window-gap" />
+      <ParallaxImages />
       <div className="window-gap" />
     </main>
   );
